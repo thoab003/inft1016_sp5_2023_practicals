@@ -1,0 +1,50 @@
+body{
+    font-family: 'open sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+}
+nav{
+    height: 80px;
+    background: #2c3e50;
+}
+
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+nav ul li{
+    display:inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+nav ul li a{
+    position: relative;
+    colour: white;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+
