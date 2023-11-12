@@ -1,21 +1,21 @@
 body{
-    font-family: 'open sans', sans-serif;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background: #2b2b2b;
 }
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 10%;
-}
+
+
 nav{
     height: 80px;
-    background: #2c3e50;
+    background: #ebeef0;
 }
 
 nav ul{
@@ -47,4 +47,48 @@ nav ul li a:before{
     transform-origin: right;
     transition: transform .4s linear;
 }
+
+input[type="checkbox"]
+{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.check
+{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #023e57;
+    cursor: pointer;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: ease-in 0.5;
+}
+
+input[type="checkbox"]:checked ~ .check
+{
+    background: #fff;
+    box-shadow: 0 0 0 1200px #023e57;
+}
+}
+.check:before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5;
+}
+
+input[type="checkbox"]:checked ~ .check:before
+{
+    transform:translateX(-50px);
+}
+
 
